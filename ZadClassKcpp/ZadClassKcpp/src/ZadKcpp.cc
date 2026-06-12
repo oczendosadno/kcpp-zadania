@@ -1,54 +1,139 @@
-#include <iostream>
 #include "../include/ZadKcpp.h"
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
 
-using namespace std;
-
-void ZadKcpp::Zad1()
+void ZadKcpp::BitoweOperatory()
 {
-    cout << "Sekcja 1 - Operatory logiczne" << endl;
+    int bits[8] = { 1,0,1,0,1,0,1,0 };
+
+    int result = 0;
+
+    for (int i = 0; i < 8; i++)
+    {
+        if (bits[i] == 1)
+        {
+            result |= (1 << i);
+        }
+    }
+
+    std::cout << "Result = " << result << std::endl;
 }
 
-void ZadKcpp::Zad2()
+void ZadKcpp::ManipulacjaCout()
 {
-    cout << "Sekcja 1 - Strumienie cout" << endl;
+    double output = 12.34567;
+    double output1 = 1.23456;
+    double output2 = 2.345678;
+    double average = (output + output1 + output2) / 3.0;
+
+    std::cout << std::fixed << std::setprecision(3);
+
+    std::cout << output << std::endl;
+    std::cout << output1 << std::endl;
+    std::cout << output2 << std::endl;
+    std::cout << average << std::endl;
 }
 
-void ZadKcpp::Zad3()
+void ZadKcpp::StringStream()
 {
-    cout << "Sekcja 2 - Wskazniki" << endl;
+    std::stringstream ss;
+
+    ss << "Hello ";
+    ss << "World ";
+    ss << 2025;
+
+    std::cout << ss.str() << std::endl;
 }
 
-void ZadKcpp::Zad4()
+void ZadKcpp::AdresowaniePamieci()
 {
-    cout << "Sekcja 2 - Tablice" << endl;
+    int a = 10;
+    int b = 20;
+    int c = 30;
+
+    std::cout << &a << std::endl;
+    std::cout << &b << std::endl;
+    std::cout << &c << std::endl;
 }
 
-void ZadKcpp::Zad5()
+void ZadKcpp::ArytmetykaWskaznikow()
 {
-    cout << "Sekcja 3 - Petle" << endl;
+    int numbers[5] = { 1,2,3,4,5 };
+
+    int sum = 0;
+
+    for (int i = 0; i < 5; i++)
+    {
+        sum += *(numbers + i);
+    }
+
+    std::cout << "Sum = " << sum << std::endl;
 }
 
-void ZadKcpp::Zad6()
+void ZadKcpp::Petle()
 {
-    cout << "Sekcja 3 - Switch" << endl;
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << i << " ";
+    }
+
+    std::cout << std::endl;
 }
 
-void ZadKcpp::Zad7()
+void ZadKcpp::Switch()
 {
-    cout << "Sekcja 4 - Klasy" << endl;
+    int number = 2;
+
+    switch (number)
+    {
+    case 1:
+        std::cout << "One" << std::endl;
+        break;
+
+    case 2:
+        std::cout << "Two" << std::endl;
+        break;
+
+    default:
+        std::cout << "Other" << std::endl;
+    }
 }
 
-void ZadKcpp::Zad8()
+void ZadKcpp::Klasy()
 {
-    cout << "Sekcja 4 - Struktury" << endl;
+    std::cout << "Demonstration of class Person" << std::endl;
 }
 
-void ZadKcpp::Zad9()
+void ZadKcpp::Struktury()
 {
-    cout << "Sekcja 5 - Friendship" << endl;
+    struct Student
+    {
+        std::string name;
+        int age;
+    };
+
+    Student s{ "Jan",20 };
+
+    std::cout << s.name << " " << s.age << std::endl;
 }
 
-void ZadKcpp::Zad10()
+void ZadKcpp::MetodyAbstrakcyjne()
 {
-    cout << "Sekcja 5.6 - Metody abstrakcyjne" << endl;
+    double r = 5.0;
+
+    double pole =
+        3.1415926535 * r * r;
+
+    double obwod =
+        2 * 3.1415926535 * r;
+
+    std::cout << "Pole kola = "
+        << pole
+        << std::endl;
+
+    std::cout << "Obwod kola = "
+        << obwod
+        << std::endl;
 }

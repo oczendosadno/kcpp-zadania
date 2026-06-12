@@ -4,16 +4,16 @@
 class ZadKcpp
 {
 public:
-    void Zad1();
-    void Zad2();
-    void Zad3();
-    void Zad4();
-    void Zad5();
-    void Zad6();
-    void Zad7();
-    void Zad8();
-    void Zad9();
-    void Zad10();
+    void BitoweOperatory();
+    void ManipulacjaCout();
+    void StringStream();
+    void AdresowaniePamieci();
+    void ArytmetykaWskaznikow();
+    void Petle();
+    void Switch();
+    void Klasy();
+    void Struktury();
+    void MetodyAbstrakcyjne();
 };
 
 #endif
